@@ -5,10 +5,10 @@
   "license": "ISC",
   "author": "Sandra&Arash",
   "type": "module",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch app.js"
+    "start": "node --watch index.js"
   },
   "dependencies": {
     "dotenv": "^17.2.4",
