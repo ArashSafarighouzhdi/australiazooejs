@@ -1,0 +1,18 @@
+{
+  "name": "australiazooejs",
+  "version": "1.0.0",
+  "description": "A dynamic web application for Australia Zoo",
+  "license": "ISC",
+  "author": "Sandra&Arash",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch app.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1"
+  }
+}
