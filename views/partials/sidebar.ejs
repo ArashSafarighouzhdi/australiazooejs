@@ -1,0 +1,13 @@
+<aside class="sidebar">
+    <div class="logo">
+<img src="/public/images/AustraliaZooLogo.png" alt="Australia Zoo Logo" class="sidebar-logo"></div>
+    <ul class="animal-list">
+        <% allAnimals.forEach(animal => { %>
+            <li>
+                <a href="/animal/<%= animal.id %>" class="animal-link">
+                    <%= animal.name %>
+                </a>
+            </li>
+        <% }) %>
+    </ul>
+</aside>
