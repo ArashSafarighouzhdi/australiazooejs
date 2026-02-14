@@ -6,7 +6,13 @@ const animalRouter = express.Router();
 const __dirname = path.resolve();
 
 animalRouter.get("/animal/:id", (req, res) => {
-  const animal = animals.find((a) => a.id === req.params.is); ///a = animal///
+  const animal = animals.find((a) => a.id === req.params.id); ///a = animal///
+
+  if (animal) {
+    const folder = animal.group.toLowerCase();
+    animal.image = `/images/${folder}/${animal.id}.png`; 
+  }
+  
   res.render(path.join(__dirname, "/views/pages/animal"), {
     allAnimals: animals,
     animal: animal,
