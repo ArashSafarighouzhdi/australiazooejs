@@ -1,0 +1,24 @@
+<%- include('../partials/head') %>
+<body>
+    <div class="container">
+        <%- include('../partials/sidebar') %>
+        <div class="right-side">
+            <%- include('../partials/header') %>
+            <main class="page-content">
+                <h1 class="welcome-title"><%= welcomeTitle %></h1>
+                <p><%= subTitle %></p>
+                
+                <div class="animals-grid">
+                    <% allAnimals.forEach(animal => { %>
+                        <div class="animal-card">
+                            <img src="<%= animal.image %>" alt="<%= animal.name %>" class="card-img">
+                            <h3><%= animal.name %></h3>
+                            <a href="/animal/<%= animal.id %>" class="view-btn">View Details</a>
+                        </div>
+                    <% }) %>
+                </div>
+            </main>
+            <%- include('../partials/footer') %>
+        </div>
+    </div>
+</body>

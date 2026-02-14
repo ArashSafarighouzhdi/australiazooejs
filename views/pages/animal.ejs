@@ -1,0 +1,45 @@
+<%- include('../partials/head') %>
+<body>
+  <div class="container">
+    <%- include('../partials/sidebar') %>
+    <div class="right-side">
+      <%- include('../partials/header') %>
+      <main class="page-content">
+        <div class="detail-header">
+          <a href="javascript:history.back()" class="back-button">← Back</a>
+          <h1 class="welcome-title"><%= animal.name %></h1>
+        </div>
+
+        <div class="animal-info-container">
+          <img
+            src="<%= animal.image %>"
+            alt="<%= animal.name %>"
+            class="detail-img"
+          />
+          <div class="animal-text">
+            <p class="group-label">
+              <strong>group:</strong> <%= animal.group %>
+            </p>
+            <p class="group-label">
+              <strong>lifespan:</strong><%= animal.lifespan %>
+            </p>
+            <p class="group-label"><strong>food:</strong><%= animal.food %></p>
+            <p class="group-label">
+              <strong>found:</strong><%= animal.found %>
+            </p>
+            <p class="group-label">
+              <strong>length:</strong><%= animal.length %>
+            </p>
+            <p class="group-label">
+              <strong>weight:</strong><%= animal.weight %>
+            </p>
+            <p class="group-label">
+              <strong>description:</strong><%= animal.description %>
+            </p>
+          </div>
+        </div>
+      </main>
+      <%- include('../partials/footer') %>
+    </div>
+  </div>
+</body>
