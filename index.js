@@ -16,12 +16,7 @@ app.get("/", (req, res) => {
   res.send("Server is up and running!");
 });
 
-<<<<<<< HEAD
-app.use("/", groupRouter);
-app.use("/", animalRouter)
-=======
 app.use("/", animalRouter)
 app.use("/", groupRouter);
->>>>>>> Feature/006/partials
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));
