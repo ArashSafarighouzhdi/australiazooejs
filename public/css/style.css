@@ -11,13 +11,28 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   background-color: var(--body-bg);
   color: var(--text-dark);
 }
 
 .container {
   display: flex;
+}
+
+.page-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
 header {
@@ -31,6 +46,8 @@ header {
   display: flex;
   gap: 20px;
   list-style: none;
+  justify-content: flex-end;
+  padding-right: 40px;
 }
 
 .menu-link {
@@ -47,13 +64,37 @@ header {
   color: var(--active-color);
 }
 
+.menu a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: bold;
+}
+
 .sidebar {
   width: 250px;
-  background-color: #1a1a1a;
+  background-color: var(--sidebar-bg);
   height: 100vh;
   padding: 20px;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.right-side {
+  margin-left: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .animal-list {
@@ -79,32 +120,60 @@ header {
 }
 
 .footer {
-  margin-top: 60px;
   padding: 20px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   text-align: center;
+  background-color: var(--sidebar-bg);
 }
 
 .footer-text {
-  color: #888;
+  color: var(--white);
   font-size: 0.9rem;
 }
 
-.footer-text strong {
-  color: var(--active-color);
-  background-color: var(--sidebar-bg);
-  height: 100vh;
-  position: fixed;
-  padding: 20px;
-}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    display: flex;
+  }
 
-.right-side {
-  margin-left: 250px;
-  width: 100%;
-}
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 15px;
+    order: 2;
+  }
 
-.menu a {
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: bold;
+  .right-side {
+    margin-left: 0;
+    width: 100%;
+    order: 1;
+  }
+
+  .menu {
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  .animal-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .animal-link {
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+
+  .sidebar-logo {
+    max-width: 100px;
+    margin: 0 auto 15px auto;
+  }
 }
