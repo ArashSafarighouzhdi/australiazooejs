@@ -2,6 +2,7 @@ import express from "express";
 import animalRouter from "./routes/animalRoutes.js";
 import * as path from "path";
 import "dotenv/config";
+import groupRouter from "./routes/groupRouter.js";
 
 const app = express();
 const port = process.env.PORT;
@@ -15,7 +16,7 @@ app.get("/", (req, res) => {
   res.send("Server is up and running!");
 });
 
-
 app.use("/", animalRouter)
+app.use("/", groupRouter);
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));

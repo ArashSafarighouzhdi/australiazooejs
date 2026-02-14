@@ -1,5 +1,5 @@
 const animals = [
-  // --- MAMMALS ---
+  // --- MAMMALS ----
   {
     id: "echidna",
     name: "Echidna",
