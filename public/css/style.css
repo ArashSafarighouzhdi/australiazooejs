@@ -130,3 +130,50 @@ header {
   color: var(--white);
   font-size: 0.9rem;
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 15px;
+    order: 2;
+  }
+
+  .right-side {
+    margin-left: 0;
+    width: 100%;
+    order: 1;
+  }
+
+  .menu {
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  .animal-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .animal-link {
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+
+  .sidebar-logo {
+    max-width: 100px;
+    margin: 0 auto 15px auto;
+  }
+}

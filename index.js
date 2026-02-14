@@ -13,6 +13,7 @@ const __dirname = path.resolve();
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
+
 app.get("/", (req, res) => {
   res.render(path.join(__dirname, "/views/pages/home"), {
     welcomeTitle: "Welcome Home Page",
