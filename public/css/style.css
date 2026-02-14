@@ -45,6 +45,7 @@ header {
 .menu-link:hover,
 .menu-link.active {
   color: var(--active-color);
+}
 
 .sidebar {
   width: 250px;
