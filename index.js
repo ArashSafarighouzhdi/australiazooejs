@@ -13,15 +13,15 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.send("Server is up and running!");
+      res.render(
+        path.join(__dirname, "/views/pages/home"), 
+        {   
+          welcomeTitle: "Welcome Home Page"
+        }
+    )
 });
 
-<<<<<<< HEAD
-app.use("/", groupRouter);
-app.use("/", animalRouter)
-=======
 app.use("/", animalRouter)
 app.use("/", groupRouter);
->>>>>>> Feature/006/partials
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));
